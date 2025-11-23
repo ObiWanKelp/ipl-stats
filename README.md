@@ -1,7 +1,3 @@
-Say LESS — here is a **perfectly formatted GitHub-ready `README.md`**, with headings, emojis, badges, clean spacing, code blocks, tables, and professional structure.
-
-Just **copy-paste** this into `README.md` in your repo — it will look 🔥 on GitHub.
-
 ---
 
 # ⭐ IPL Tournament Management System
