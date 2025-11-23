@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manage Matches</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">🏏 IPL Manager</a>
+      <div class="nav-links">
+        <a href="teams.html">Teams</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="venues.html">Venues</a>
+        <a href="team_points.html">Team Points</a>
+        <a href="bookings.html">Bookings</a>
+      </div>
+    </nav>
+    <a class="back-btn" href="index.html">← Back to Home</a>
+
+    <h2>Schedule Match</h2>
+
+    <div class="center-flex">
+      <form action="schedule_match.php" method="POST" class="form-box">
+        <input type="number" name="teamA" placeholder="Team A ID" required />
+        <input type="number" name="teamB" placeholder="Team B ID" required />
+        <input type="number" name="venue" placeholder="Venue ID" required />
+        <input type="datetime-local" name="time" required />
+        <button type="submit">Schedule Match</button>
+      </form>
+    </div>
+
+    <h2>All Matches</h2>
+    <div id="matchList"></div>
+
+    <script>
+      loadMatches();
+    </script>
+  </body>
+</html>

@@ -15,3 +15,21 @@ function loadBookings() {
     .then((res) => res.text())
     .then((data) => (document.getElementById("bookingList").innerHTML = data));
 }
+
+function loadVenues() {
+  fetch("get_venues.php")
+    .then((res) => res.text())
+    .then((data) => (document.getElementById("venueList").innerHTML = data));
+}
+
+function loadMatches() {
+  fetch("get_matches.php")
+    .then((res) => res.text())
+    .then((data) => (document.getElementById("matchList").innerHTML = data));
+}
+
+function loadTeamPoints() {
+  fetch("get_team_points.php")
+    .then((res) => res.text())
+    .then((data) => (document.getElementById("pointsList").innerHTML = data));
+}
