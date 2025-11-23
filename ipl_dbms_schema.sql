@@ -300,6 +300,31 @@ BEGIN
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE PROCEDURE DeleteTeam(IN p_teamID INT)
+BEGIN
+    -- remove players in that team
+    DELETE FROM Player WHERE TeamID = p_teamID;
+
+    -- remove team points
+    DELETE FROM TeamPoints WHERE TeamID = p_teamID;
+
+    -- remove tickets for matches of that team
+    DELETE FROM Ticket 
+    WHERE MatchID IN (
+        SELECT MatchID FROM MatchTbl 
+        WHERE TeamAID = p_teamID OR TeamBID = p_teamID
+    );
+
+    -- remove matches
+    DELETE FROM MatchTbl 
+    WHERE TeamAID = p_teamID OR TeamBID = p_teamID;
+
+    -- finally remove team
+    DELETE FROM Team WHERE TeamID = p_teamID;
+END$$
+DELIMITER ;
+
 /* ===========================================================
    TRIGGER – AUTO UPDATE TEAM POINTS WHEN MATCH RESULT SET
    =========================================================== */

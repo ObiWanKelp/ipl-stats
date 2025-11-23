@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manage Players</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Add New Player</h2>
+
+    <form action="add_player.php" method="POST" class="form-box">
+      <input type="text" name="name" placeholder="Player Name" required />
+
+      <select name="role" required>
+        <option value="">Select Role</option>
+        <option value="Batsman">Batsman</option>
+        <option value="Bowler">Bowler</option>
+        <option value="All-rounder">All-rounder</option>
+        <option value="Wicketkeeper">Wicketkeeper</option>
+      </select>
+
+      <input type="number" name="team" placeholder="Team ID" required />
+
+      <button type="submit">Add Player</button>
+    </form>
+
+    <h2>All Players</h2>
+    <div id="playerList"></div>
+
+    <script src="script.js"></script>
+    <script>
+      loadPlayers();
+    </script>
+  </body>
+</html>
