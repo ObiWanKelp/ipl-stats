@@ -3,14 +3,24 @@
   <head>
     <title>Manage Teams</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
 
   <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
       <a href="index.html" class="nav-logo">🏏 IPL Manager</a>
       <div class="nav-links">
         <a href="teams.html">Teams</a>
         <a href="players.html">Players</a>
+        <a href="venues.html">Venues</a>
+        <a href="matches.html">Matches</a>
+        <a href="team_points.html">Points</a>
         <a href="bookings.html">Bookings</a>
       </div>
     </nav>
@@ -19,23 +29,41 @@
 
     <h2>Add New Team</h2>
 
-    <form action="add_team.php" method="POST" class="form-box">
-      <input type="text" name="name" placeholder="Team Name" required />
-      <input type="text" name="city" placeholder="City" required />
-      <input
-        type="text"
-        name="years"
-        placeholder="Winning Years (comma-separated)"
-      />
-      <button type="submit">Add Team</button>
-    </form>
+    <div class="center-flex">
+      <form action="add_team.php" method="POST" class="form-box">
+        <input type="text" name="name" placeholder="Team Name" required />
+        <input type="text" name="city" placeholder="City" required />
+        <input
+          type="text"
+          name="years"
+          placeholder="Winning Years (comma-separated)"
+        />
+        <button type="submit">Add Team</button>
+      </form>
+    </div>
 
     <h2>All Teams</h2>
     <div id="teamList"></div>
+    <h2>Get Total Runs of a Team</h2>
 
-    <script src="script.js"></script>
+    <div class="center-flex">
+      <div class="form-box" style="width: 280px">
+        <input
+          type="number"
+          id="teamRunsInput"
+          placeholder="Enter Team ID"
+          required
+        />
+        <button onclick="loadTeamRunsByID()">Check Runs</button>
+      </div>
+    </div>
+
+    <div id="teamRunsResult"></div>
+
     <script>
       loadTeams();
     </script>
+
+    <script src="loader.js"></script>
   </body>
 </html>

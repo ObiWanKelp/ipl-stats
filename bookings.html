@@ -3,14 +3,24 @@
   <head>
     <title>Ticket Booking</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
 
   <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
       <a href="index.html" class="nav-logo">🏏 IPL Manager</a>
       <div class="nav-links">
         <a href="teams.html">Teams</a>
         <a href="players.html">Players</a>
+        <a href="venues.html">Venues</a>
+        <a href="matches.html">Matches</a>
+        <a href="team_points.html">Points</a>
         <a href="bookings.html">Bookings</a>
       </div>
     </nav>
@@ -19,19 +29,27 @@
 
     <h2>Book a Ticket</h2>
 
-    <form action="book_ticket.php" method="POST" class="form-box">
-      <input type="text" name="customer" placeholder="Customer Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="number" name="ticket" placeholder="Ticket ID" required />
-      <button type="submit">Book Ticket</button>
-    </form>
+    <div class="center-flex">
+      <form action="book_ticket.php" method="POST" class="form-box">
+        <input
+          type="text"
+          name="customer"
+          placeholder="Customer Name"
+          required
+        />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="number" name="ticket" placeholder="Ticket ID" required />
+        <button type="submit">Book Ticket</button>
+      </form>
+    </div>
 
     <h2>All Bookings</h2>
     <div id="bookingList"></div>
 
-    <script src="script.js"></script>
     <script>
       loadBookings();
     </script>
+
+    <script src="loader.js"></script>
   </body>
 </html>

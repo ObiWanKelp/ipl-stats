@@ -7,21 +7,30 @@
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div class="page-loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
       <a href="index.html" class="nav-logo">🏏 IPL Manager</a>
       <div class="nav-links">
         <a href="teams.html">Teams</a>
         <a href="players.html">Players</a>
-        <a href="matches.html">Matches</a>
         <a href="venues.html">Venues</a>
-        <a href="team_points.html">Team Points</a>
+        <a href="matches.html">Matches</a>
+        <a href="team_points.html">Points</a>
         <a href="bookings.html">Bookings</a>
       </div>
     </nav>
+
+    <!-- BACK BTN -->
     <a class="back-btn" href="index.html">← Back to Home</a>
 
     <h2>Schedule Match</h2>
 
+    <!-- FORM -->
     <div class="center-flex">
       <form action="schedule_match.php" method="POST" class="form-box">
         <input type="number" name="teamA" placeholder="Team A ID" required />
@@ -34,9 +43,21 @@
 
     <h2>All Matches</h2>
     <div id="matchList"></div>
+    <h2>Upcoming Matches</h2>
+    <div id="upcomingMatches"></div>
+    <script>
+      loadUpcomingMatches();
+    </script>
+    <h2>Match Details</h2>
+    <div id="matchDetails"></div>
+    <script>
+      loadMatchDetails();
+    </script>
 
     <script>
       loadMatches();
     </script>
+
+    <script src="loader.js"></script>
   </body>
 </html>

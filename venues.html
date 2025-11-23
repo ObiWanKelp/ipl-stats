@@ -7,6 +7,12 @@
   </head>
 
   <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
       <a href="index.html" class="nav-logo">🏏 IPL Manager</a>
       <div class="nav-links">
@@ -14,10 +20,11 @@
         <a href="players.html">Players</a>
         <a href="matches.html">Matches</a>
         <a href="venues.html">Venues</a>
-        <a href="team_points.html">Team Points</a>
+        <a href="team_points.html">Points</a>
         <a href="bookings.html">Bookings</a>
       </div>
     </nav>
+
     <a class="back-btn" href="index.html">← Back to Home</a>
 
     <h2>Add New Venue</h2>
@@ -44,5 +51,7 @@
     <script>
       loadVenues();
     </script>
+
+    <script src="loader.js"></script>
   </body>
 </html>

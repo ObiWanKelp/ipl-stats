@@ -3,44 +3,74 @@
   <head>
     <title>Manage Players</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div class="page-loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
       <a href="index.html" class="nav-logo">🏏 IPL Manager</a>
       <div class="nav-links">
         <a href="teams.html">Teams</a>
         <a href="players.html">Players</a>
+        <a href="venues.html">Venues</a>
+        <a href="matches.html">Matches</a>
+        <a href="team_points.html">Points</a>
         <a href="bookings.html">Bookings</a>
       </div>
     </nav>
 
+    <!-- BACK BUTTON -->
     <a class="back-btn" href="index.html">← Back to Home</a>
 
     <h2>Add New Player</h2>
 
-    <form action="add_player.php" method="POST" class="form-box">
-      <input type="text" name="name" placeholder="Player Name" required />
+    <!-- FORM -->
+    <div class="center-flex">
+      <form action="add_player.php" method="POST" class="form-box">
+        <input type="text" name="name" placeholder="Player Name" required />
 
-      <select name="role" required>
-        <option value="">Select Role</option>
-        <option value="Batsman">Batsman</option>
-        <option value="Bowler">Bowler</option>
-        <option value="All-rounder">All-rounder</option>
-        <option value="Wicketkeeper">Wicketkeeper</option>
-      </select>
+        <select name="role" required>
+          <option value="">Select Role</option>
+          <option value="Batsman">Batsman</option>
+          <option value="Bowler">Bowler</option>
+          <option value="All-rounder">All-rounder</option>
+          <option value="Wicketkeeper">Wicketkeeper</option>
+        </select>
 
-      <input type="number" name="team" placeholder="Team ID" required />
+        <input type="number" name="team" placeholder="Team ID" required />
 
-      <button type="submit">Add Player</button>
-    </form>
+        <button type="submit">Add Player</button>
+      </form>
+    </div>
 
     <h2>All Players</h2>
     <div id="playerList"></div>
+    <h2>Get Player Stats</h2>
 
-    <script src="script.js"></script>
+    <div class="center-flex">
+      <div class="form-box" style="width: 280px">
+        <input
+          type="number"
+          id="playerStatsInput"
+          placeholder="Enter Player ID"
+          required
+        />
+        <button onclick="loadPlayerStatsByID()">Check Player Stats</button>
+      </div>
+    </div>
+
+    <div id="playerStatsResult"></div>
+
     <script>
       loadPlayers();
     </script>
+
+    <script src="loader.js"></script>
   </body>
 </html>
