@@ -6,7 +6,7 @@
 
 A complete IPL-style tournament management system built using **MySQL**, **SQL Procedures**, **Triggers**, **Functions**, **Cursors**, and a clean **PHP Frontend**.
 
-This project fully meets DBMS lab requirements and is deployable on any local PHP server.
+This project fully meets DBMS lab requirements and is deployable on any local PHP server. Made as a minor project for DBMS.
 
 ---
 
