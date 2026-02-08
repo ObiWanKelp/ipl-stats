@@ -21,7 +21,7 @@ This project fully meets DBMS lab requirements and is deployable on any local PH
 * Tickets
 * Bookings
 * Player Performance
-* Team Points auto-update
+* Team Points auto-updateeeee
 
 ---
 
