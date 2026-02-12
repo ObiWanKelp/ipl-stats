@@ -14,7 +14,7 @@ This project fully meets DBMS lab requirements and is deployable on any local PH
 
 ### 🏏 **Tournament Modules**
 
-* Teams
+* Teamshhhhh
 * Players
 * Venues
 * Matches
