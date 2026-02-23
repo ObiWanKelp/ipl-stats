@@ -2,7 +2,7 @@ fgggg---ggggg
 fffffggggghgggdfd
 # ⭐ IPL Tournament Management System Main Readmeeeeeeeeeeeedddddd
 
-### **DBMS Project • MySQL + PHP • Trigger, Cursor, Procedures, Full Frontend**gggggggggggggggwa
+### **DBMS Project • MySQL + PHP • Trigger, Cursor, Procedures, Full Frontend**gggggggggggggggwagggg
 
 A complete IPL-style tournament management system built using **MySQL**, **SQL Procedures**, **Triggers**, **Functions**, **Cursors**, and a clean **PHP Frontend**.
 
