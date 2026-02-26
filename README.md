@@ -1,6 +1,6 @@
 fgggg---ggggg
 fffffggggghgggdfdfffffdfsa
-# ⭐ IPL Tournament Management System Main Readmeeeeeeeeeeeedddddd
+# ⭐ IPL Tournament Management System Main Readmeeeeeeeeeeeeddddddhjjkl
 
 ### **DBMS Project • MySQL + PHP • Trigger, Cursor, Procedures, Full Frontend**gggggggggggggggwagggg
 
